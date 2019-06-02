@@ -42,6 +42,6 @@
 
 ### Contributions
 
-Projet basé sur https://travis-ci.org/code-kotis/barcode-scanner.svg?branch=master
+Projet basé sur [code-kotis/qr-code-scanner](https://github.com/code-kotis/qr-code-scanner).
 
 #### Sous licence MIT
