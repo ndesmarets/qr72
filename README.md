@@ -37,7 +37,7 @@
 3. Construction et déploiement
 
   ```bash
-  npm run build
+  npm run deploy
   ```
 
 ### Contributions
