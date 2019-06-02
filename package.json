@@ -1,0 +1,50 @@
+{
+	"name": "QR72",
+	"description": "QR72 permet de scanner les QR-codes facilement et rapidement.",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "webpack-dev-server --hot --inline --open --mode=development",
+		"build": "cross-env NODE_ENV=production webpack-cli --mode=production --config webpack.config.js",
+		"stats": "cross-env NODE_ENV=production webpack-cli --mode=production --profile --json > stats.json",
+		"pretty": "prettier --write 'app/**/*.js'",
+		"deploy": "npm run build && bash deploy.sh"
+	},
+	"husky": {
+		"hooks": {
+			"precommit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,css}": [
+			"npm run pretty",
+			"git add"
+		]
+	},
+	"engines": {
+		"node": ">=4.1.1"
+	},
+	"dependencies": {
+		"is-url": "^1.2.4",
+		"copy-to-clipboard": "^3.2.0"
+	},
+	"devDependencies": {
+		"clean-webpack-plugin": "^0.1.19",
+		"copy-webpack-plugin": "^4.5.3",
+		"cross-env": "^5.2.0",
+		"css-loader": "^1.0.0",
+		"danger": "^4.4.8",
+		"extract-text-webpack-plugin": "4.0.0-beta.0",
+		"file-loader": "^2.0.0",
+		"html-webpack-plugin": "^3.2.0",
+		"husky": "^1.1.2",
+		"lint-staged": "^7.3.0",
+		"mini-css-extract-plugin": "^0.4.4",
+		"optimize-css-assets-webpack-plugin": "^5.0.1",
+		"prettier": "^1.14.3",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.20.2",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.9",
+		"workbox-webpack-plugin": "^3.6.2"
+	}
+}

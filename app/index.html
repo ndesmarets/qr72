@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>QR72</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=description content="QR72 permet de scanner les QR-codes facilement et rapidement.">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="QR72" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1e8742">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="QR Scanner" />
+    <meta name="msapplication-TileColor" content="#1e8742" />
+    <meta name="msapplication-TileImage" content="/images/touch/mstile-144x144.png" />
+    <meta name="theme-color" content="#fff" />
+    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/images/touch/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/touch/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" href="/images/touch/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preload" as="script" href="decoder.js">
+  </head>
+  <body>
+    <div class="app__layout">
+
+      <main class="app__layout-content">
+        <video autoplay></video>
+
+        <!-- Dialog  -->
+        <div class="app__dialog app__dialog--hide">
+          <div class="app__dialog-content">
+            <h5>QR Code trouvé !</h5>
+            <input type="text" id="result">
+          </div>
+          <div class="app__dialog-actions">
+            <button type="button" class="app__dialog-copy">Copier</button>
+            <button type="button" class="app__dialog-open">Ouvrir</button>
+            <button type="button" class="app__dialog-close">Fermer</button>
+          </div>
+        </div>
+
+        <div class="app__dialog-overlay app__dialog--hide"></div>
+
+        <!-- Snackbar -->
+        <div class="app__snackbar"></div>
+      </main>
+    </div>
+    <div class="app__overlay">
+      <div class="app__overlay-frame"></div>
+      <!-- Scanner animation -->
+      <div class="custom-scanner"></div>
+      <div class="app__help-text"></div>
+    </div>
+
+    <div class="app__logo"></div>
+
+	<div class="app__flip-camera"></div>
+
+    <div class="app__add-photo"></div>
+    
+    <div class="app__remove-photo"></div>
+
+    <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
