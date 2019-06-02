@@ -22,19 +22,25 @@
 
 ## Installation
 
-1. Cloner ce dépôt
+1. Cloner le dépôt
 
   ```bash
   git clone https://github.com/ndesmarets/QR72.git
   ```
 
-2. Installation
+2. Installer les modules
 
   ```bash
   npm install
   ```
+  
+3. Tester en local
 
-3. Construction et déploiement
+  ```bash
+  npm run start
+  ```
+
+4. Construire et déployer
 
   ```bash
   npm run deploy
