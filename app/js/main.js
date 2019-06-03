@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
   var videoElement = document.querySelector('video');
   window.appOverlay = document.querySelector('.app__overlay');
   var selectedCamera = null;
-  var typeCamera = 'environment';
+  var typeCamera = null;
   
   
   
@@ -159,7 +159,9 @@ window.addEventListener('DOMContentLoaded', () => {
           selectedCamera = 0;
         }
         
-        if(typeCamera == 'environment'){
+        if(typeCamera == null){
+          typeCamera = 'environment';
+        } else if(typeCamera == 'environment'){
       	  typeCamera = 'user';
         } else {
       	  typeCamera = 'environment';
